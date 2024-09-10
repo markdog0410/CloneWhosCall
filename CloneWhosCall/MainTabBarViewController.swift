@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UIViewController {
+class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +18,21 @@ class MainTabBarViewController: UIViewController {
         let vc4 = UINavigationController(rootViewController: BlockViewController())
         let vc5 = UINavigationController(rootViewController: AdvenceViewController())
         
-        vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "play.circle")
+        vc1.tabBarItem.image = UIImage(systemName: "checkmark.shield")
+        vc2.tabBarItem.image = UIImage(systemName: "envelope")
         vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-        vc4.tabBarItem.image = UIImage(systemName: "arrow.down.to.line")
+        vc4.tabBarItem.image = UIImage(systemName: "xmark.circle")
+        vc5.tabBarItem.image = UIImage(systemName: "shield.checkered")
         
-        vc1.title = "Home"
-        vc2.title = "Upcoming"
-        vc3.title = "Search"
-        vc4.title = "Download"
+        vc1.title = "來電防護"
+        vc2.title = "簡訊管家"
+        vc3.title = "反查號碼"
+        vc4.title = "手動封鎖"
+        vc5.title = "進階防護"
         
-        tabBar.tintColor = .label
+        tabBar.tintColor = .systemGreen
         
-        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
     }
     
 
